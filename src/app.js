@@ -69,7 +69,7 @@ app.delete("/repositories/:id", (request, response) => {
     return response.status(400).send({message:"id not found"});
   }
 
-  repositories.slice(projectIndex, 1);
+  repositories.splice(projectIndex, 1);
   
   return response.status(204).send();
 });
